@@ -1,0 +1,58 @@
+#!/usr/bin/env ruby
+#
+#
+
+APPLICATION_PATH = File.expand_path(File.join(File.dirname(__FILE__), ".."));
+
+require 'rubygems'
+require "#{APPLICATION_PATH}/lib/helio-bundle"
+require 'mixlib/cli'
+
+class HelioBundleCLI
+  include Mixlib::CLI
+   
+  option :bamboo_url,
+    :short => "-b URL",
+    :long => "--bamboo URL",
+    :description => "The full path to the bamboo API.  Example:  https://bamboo.apollogrp.edu/rest/api/",
+    :default => "https://bamboo.apollogrp.edu/rest/api/"
+  
+  option :port,
+   :short => "-P PORT",
+   :long => "--port PORT",
+   :description => "The port to run on, default 4567",
+   :default => 4567
+
+  option :public,
+   :short => "-p PUBLIC_KEY",
+   :long => "--public PUBLIC_KEY",
+   :description => "The AWS public key to use for S3 upload",
+   :required => true
+
+  option :secret,
+   :short => "-s SECRET_KEY",
+   :long => "--secret SECRET_KEY",
+   :description => "The AWS secret key to use for S3 upload",
+   :required => true
+
+  option :version,
+    :short => "-v VERSION",
+    :long => "--version VERSION",
+    :description => "The version quad to apply to the zip file.  I.E. 0.2.0.0",
+    :required => true
+end
+
+cli = HelioBundleCLI.new
+cli.parse_options
+
+HelioBundle.bamboo_url = cli.config[:bamboo_url]
+HelioBundle.meta_seed = YAML::load(File.open("#{APPLICATION_PATH}/conf/bundle_definitions.yaml"))
+HelioBundle.version = cli.config[:version]
+HelioBundle.configure
+
+AWS::S3::Base.establish_connection!(
+    :access_key_id     => cli.config[:public],
+    :secret_access_key => cli.config[:secret]
+)
+
+HelioBundle.run! :host => 'localhost', :port => cli.config[:port] 
