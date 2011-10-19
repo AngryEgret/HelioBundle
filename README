@@ -1,0 +1,34 @@
+= HelioBundle
+
+Sinatra application designed to download artifacts from a Bamboo CI server, bundle them into a specific zip format and upload them to AWS S3 for later consumption.
+
+
+== Usage
+
+This service can be run as a standalone, single threaded application using a command line interface, or with thin using a rackup file.
+
+=== Standalone CLI
+<em>Great for single user testing and quick runs.</em>
+
+<tt>./bin/heliobundle -b <bamboo URL> -P <port> -p <AWS Public key> -s <AWS Secret key> -v <version in the file name></tt>
+
+=== Thin / Rackup 
+<em>Great for multi-threaded long term running.  Especially in an nginx/thin stack with mulitple thin processes</em>
+
+<tt>thin start -R ./config.ru</tt>
+
+
+== Notes 
+
+* This project was thrown together very quickly to support a very speicific need.  While it probably won't solve your problem, hopefully it will give you some good ideas.
+* Suggestions are welcome.
+
+== ToDo
+
+* Some testing would be nice.
+* Proper versioning would also be a bonus.
+* Bundler for gem dependencies.
+
+== Copyright
+
+Copyright (c) 2011 Ryan Greget.
