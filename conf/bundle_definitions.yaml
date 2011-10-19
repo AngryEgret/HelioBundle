@@ -1,0 +1,187 @@
+--- 
+assessments_v2: 
+  :helio_name: assessments_v2
+  :bamboo_name: 
+  - IVLP-ASSESV2
+  :key_file: AssessmentsResourcesV2-0.2.0.SNAPSHOT.war
+  :required_artifacts: 
+  - com.springsource.org.apache.commons.lang-2.4.0.jar
+  - AssessmentsCore-APIV2-0.2.0.SNAPSHOT.jar
+  - AssessmentsCore-ImplV2-0.2.0.SNAPSHOT.jar
+  - AssessmentsResourcesV2-0.2.0.SNAPSHOT.war
+  - AssessmentsContentProxyV2-0.2.0.SNAPSHOT.war
+assignments_service: 
+  :helio_name: assignments_service
+  :bamboo_name: 
+  - IVLP-ASSIGNMENT
+  :key_file: AssignmentResource-0.2.0.SNAPSHOT.war
+  :required_artifacts: 
+  - AssignmentResource-0.2.0.SNAPSHOT.war
+  - Assignment-API-0.2.0.SNAPSHOT.jar
+  - Assignment-Impl-0.2.0.SNAPSHOT.jar
+auth_service: 
+  :helio_name: auth_service
+  :bamboo_name: 
+  - IVLP-AUTHPROVIDE
+  - IVLP-ROSTER
+  - IVLP-OAUTH
+  :key_file: AuthorizationProviderResource-0.2.0.SNAPSHOT.war
+  :required_artifacts: 
+  - RosterCore-API-0.2.0.SNAPSHOT.jar
+  - RosterCore-Impl-0.2.0.SNAPSHOT.jar
+  - AuthorizationProvider-Impl-0.2.0.SNAPSHOT.jar
+  - AuthorizationProviderResource-0.2.0.SNAPSHOT.war
+  - OAuth-Console-0.2.0.SNAPSHOT.jar
+classroom_roster: 
+  :helio_name: classroom_roster
+  :bamboo_name: 
+  - IVLP-ROSTER
+  - IVLP-SERVICEPROXY
+  :key_file: RosterResource-0.2.0.SNAPSHOT.war
+  :required_artifacts: 
+  - RosterCore-API-0.2.0.SNAPSHOT.jar
+  - RosterCore-Impl-0.2.0.SNAPSHOT.jar
+  - RosterResource-0.2.0.SNAPSHOT.war
+  - ServiceProxyResource-0.2.0.SNAPSHOT.war
+classroom_service: 
+  :helio_name: classroom_service
+  :bamboo_name: 
+  - IVLP-CLASSROOM
+  - IVLP-QUIZTOOL
+  :key_file: Classroom.war
+  :required_artifacts: 
+  - Classroom.war
+  - quiz-tool-0.2.0.SNAPSHOT.war
+data_viewer: 
+  :helio_name: data_viewer
+  :bamboo_name: 
+  - IVLP-DATAVIEWER
+  :key_file: DataViewer.war
+  :required_artifacts: 
+  - DataViewer.war
+discussions_service: 
+  :helio_name: discussions_service
+  :bamboo_name: 
+  - IVLP-DISCUSSIONS
+  - IVLP-ACTSTREAM
+  - IVLP-ACCESS
+  - IVLP-TAGGING
+  :key_file: DiscussionsRestApplicationWar-0.2.0.SNAPSHOT.war 
+  :required_artifacts: 
+  - ActivitiesService-0.2.0.SNAPSHOT.jar
+  - DiscussionsActivity-0.2.0.SNAPSHOT.jar
+  - AccessRestApplicationWar-0.2.0.SNAPSHOT.war
+  - DiscussionsSpellCheckService-0.2.0.SNAPSHOT.war
+  - HttpRequestWebapp-0.2.0.SNAPSHOT.war
+  - ActivityRestApplicationWar-0.2.0.SNAPSHOT.war
+  - DiscussionsRestApplicationWar-0.2.0.SNAPSHOT.war
+  - TaggingRestApplicationWar-0.2.0.SNAPSHOT.war
+format_author: 
+  :helio_name: format_author
+  :bamboo_name: 
+  - IVLP-FORMATSVC
+  :key_file: FormatResourceProvisionTool-0.2.0.SNAPSHOT.war
+  :required_artifacts: 
+  - FormatCore-API-0.2.0.SNAPSHOT.jar
+  - FormatCore-Impl-0.2.0.SNAPSHOT.jar
+  - FormatResourceProvisionTool-0.2.0.SNAPSHOT.war
+  - FormatCore-Converters-0.2.0.SNAPSHOT.jar
+format_service: 
+  :helio_name: format_service
+  :bamboo_name: 
+  - IVLP-FORMATSVC
+  - IVLP-CACHEDREPO
+  :key_file: FormatResourceProvisionTool-0.2.0.SNAPSHOT.war
+  :required_artifacts: 
+  - FormatCore-API-0.2.0.SNAPSHOT.jar
+  - FormatCore-Impl-0.2.0.SNAPSHOT.jar
+  - FormatResourceProvisionTool-0.2.0.SNAPSHOT.war
+  - CacheRepository-API-0.2.0.SNAPSHOT.jar
+  - FormatCore-Converters-0.2.0.SNAPSHOT.jar
+  - FormatResource-0.2.0.SNAPSHOT.war
+syllabus_v2: 
+  :helio_name: syllabus_v2
+  :bamboo_name: 
+  - IVLP-SYLLABUSV2
+  - IVLP-ROSTER
+  - IVLP-BLTI
+  :key_file: SyllabusResourcesV2-0.2.0.SNAPSHOT.war
+  :required_artifacts: 
+  - com.springsource.org.apache.commons.lang-2.4.0.jar
+  - RosterCore-API-0.2.0.SNAPSHOT.jar
+  - Syllabus-APIV2-0.2.0.SNAPSHOT.jar
+  - SyllabusRepository-APIV2-0.2.0.SNAPSHOT.jar
+  - SyllabusRepository-ImplV2-0.2.0.SNAPSHOT.jar
+  - Syllabus-ImplV2-0.2.0.SNAPSHOT.jar
+  - SyllabusUtilsV2-0.2.0.SNAPSHOT.jar
+  - BLTI-API-0.2.0.SNAPSHOT.jar
+  - BLTIRepository-API-0.2.0.SNAPSHOT.jar
+  - BLTIRepository-Impl-0.2.0.SNAPSHOT.jar
+  - BLTI-Impl-0.2.0.SNAPSHOT.jar
+  - BLTIResources-0.2.0.SNAPSHOT.war
+  - SyllabusResourcesV2-0.2.0.SNAPSHOT.war
+classroom_provision: 
+  :helio_name: classroom_provision
+  :bamboo_name: 
+  - IVLP-PROVISIONING
+  - IVLP-SYLLABUSV2
+  - IVLP-ASSESV2
+  :key_file: ProvisioningResources-0.2.0.SNAPSHOT.war
+  :required_artifacts: 
+  - Syllabus-APIV2-0.2.0.SNAPSHOT.jar
+  - AssessmentsCore-APIV2-0.2.0.SNAPSHOT.jar
+  - Provisioning-API-0.2.0.SNAPSHOT.jar
+  - Provisioning-Impl-0.2.0.SNAPSHOT.jar
+  - ProvisioningResources-0.2.0.SNAPSHOT.war
+c5_instrumentation: 
+  :helio_name: c5_instrumentation
+  :bamboo_name: 
+  - IVLP-EVENTS
+  - IVLP-ACTREPOSVC
+  :key_file: InstrumentationWar-0.2.0.SNAPSHOT.war
+  :required_artifacts: 
+  - InstrumentationWar-0.2.0.SNAPSHOT.war
+  - EventsCore-API-0.2.0.SNAPSHOT.jar
+  - EventsCore-Impl-0.2.0.SNAPSHOT.jar
+c5_virtual_repo: 
+  :helio_name: c5_virtual_repo
+  :bamboo_name: 
+  - IVLP-VIRTUALREPO
+  :key_file: VRResources-0.2.0.SNAPSHOT.war
+  :required_artifacts: 
+  - VRCore-API-0.2.0.SNAPSHOT.jar
+  - VRCore-Impl-0.2.0.SNAPSHOT.jar
+  - VRResources-0.2.0.SNAPSHOT.war
+ale_metadata_service: 
+  :helio_name: ale_metadata_service
+  :bamboo_name: 
+  - IVLP-METADATA
+  :key_file: metadataWebapp-0.2.0.SNAPSHOT.war
+  :required_artifacts: 
+  - metadataWebapp-0.2.0.SNAPSHOT.war
+  - solr-3.4.0.war
+ale_tutor_service: 
+  :helio_name: ale_tutor_service
+  :bamboo_name: 
+  - IVLP-ALETUTOR
+  :key_file: AleTutorResources-0.2.0.SNAPSHOT.war
+  :required_artifacts: 
+  - AleTutorCore-API-0.2.0.SNAPSHOT.jar
+  - AleTutorCore-Impl-0.2.0.SNAPSHOT.jar
+  - AleTutorResources-0.2.0.SNAPSHOT.war
+ale_content_repo: 
+  :helio_name: ale_content_repo
+  :bamboo_name: 
+  - IVLP-CONTENTREPOPROXY
+  :key_file: ContentRepository-0.2.0.SNAPSHOT.war
+  :required_artifacts: 
+  - ContentRepository-0.2.0.SNAPSHOT.war
+ale_tutor_assessment: 
+  :helio_name: ale_tutor_assessment
+  :bamboo_name: 
+  - IVLP-TFA
+  - IVLP-FACULTYDASHBOARD
+  :key_file: tutor.war
+  :required_artifacts: 
+  - tutor.war
+  - FacultyDashboard.war
